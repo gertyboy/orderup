@@ -14,7 +14,7 @@ function initializeForm() {
     defaultDrinkOption.selected = true;
     defaultDrinkOption.disabled = true;
     drinkSelect.appendChild(defaultDrinkOption);
-    ['Coffee', 'Tea', 'Smoothie'].forEach(drink => {
+    ['Coffee', 'Tea', 'Smoothie', 'Juice', 'Milkshake'].forEach(drink => {
         const option = document.createElement('option');
         option.value = drink;
         option.textContent = drink;
@@ -59,8 +59,10 @@ function initializeForm() {
     // Flavor options based on drink
     const flavorOptions = {
         Coffee: ['Vanilla', 'Caramel', 'Hazelnut'],
-        Tea: ['Lemon', 'Mint', 'Ginger'],
-        Smoothie: ['Strawberry', 'Mango', 'Banana']
+        Tea: ['Honey Chai Turmeric', 'Blueberry Green Tea', 'Jasmine', 'Caramel Vanilla', 'Peppermint', 'Matcha'],
+        Smoothie: ['Strawberry', 'Mango', 'Banana'],
+        Juice: ['Orange', 'Apple', 'Grape', 'Pineapple'],
+        Milkshake: ['Chocolate', 'Vanilla', 'Strawberry', 'Oreo']
     };
 
     const updateFlavors = () => {
@@ -100,14 +102,29 @@ function initializeForm() {
             Hazelnut: ['Milk', 'Sugar', 'Hazelnut Syrup']
         },
         Tea: {
-            Lemon: ['Honey', 'Lemon Slice', 'Sugar'],
-            Mint: ['Honey', 'Mint Leaves', 'Sugar'],
-            Ginger: ['Honey', 'Ginger Slice', 'Sugar']
+            'Honey Chai Turmeric': ['Honey', 'Cinnamon', 'Turmeric'],
+            'Blueberry Green Tea': ['Honey', 'Blueberry Syrup', 'Lemon Slice'],
+            Jasmine: ['Honey', 'Jasmine Flowers', 'Sugar'],
+            'Caramel Vanilla': ['Caramel Drizzle', 'Vanilla Syrup', 'Milk'],
+            Peppermint: ['Honey', 'Mint Leaves', 'Sugar'],
+            Matcha: ['Honey', 'Milk', 'Whipped Cream']
         },
         Smoothie: {
             Strawberry: ['Ice', 'Whipped Cream', 'Chia Seeds'],
             Mango: ['Ice', 'Whipped Cream', 'Coconut Flakes'],
             Banana: ['Ice', 'Peanut Butter', 'Chia Seeds']
+        },
+        Juice: {
+            Orange: ['Ice', 'Mint Leaves', 'Sugar'],
+            Apple: ['Ice', 'Cinnamon', 'Honey'],
+            Grape: ['Ice', 'Sugar', 'Lemon Slice'],
+            Pineapple: ['Ice', 'Coconut Flakes', 'Mint Leaves']
+        },
+        Milkshake: {
+            Chocolate: ['Whipped Cream', 'Chocolate Chips', 'Sprinkles'],
+            Vanilla: ['Whipped Cream', 'Vanilla Syrup', 'Sprinkles'],
+            Strawberry: ['Whipped Cream', 'Strawberry Syrup', 'Sprinkles'],
+            Oreo: ['Whipped Cream', 'Crushed Oreos', 'Chocolate Syrup']
         }
     };
 
