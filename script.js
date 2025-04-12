@@ -31,7 +31,7 @@ function initializeForm() {
     tempLabel.style.display = 'none';
     const tempSelect = document.createElement('select');
     tempSelect.id = 'tempSelect';
-    ['hot', 'cold'].forEach(temp => {
+    ['Hot', 'Iced'].forEach(temp => {
         const option = document.createElement('option');
         option.value = temp;
         option.textContent = temp;
@@ -58,7 +58,7 @@ function initializeForm() {
 
     // Flavor options based on drink
     const flavorOptions = {
-        Coffee: ['Vanilla', 'Caramel', 'Hazelnut'],
+        Coffee: ['French Vanilla'],
         Tea: ['Honey Chai Turmeric', 'Blueberry Green Tea', 'Jasmine', 'Caramel Vanilla', 'Peppermint', 'Matcha'],
         Smoothie: ['Strawberry', 'Mango', 'Banana'],
         Juice: ['Orange', 'Apple', 'Grape', 'Pineapple'],
@@ -97,17 +97,15 @@ function initializeForm() {
     // Add-ins options based on drink and flavor
     const addInsOptions = {
         Coffee: {
-            Vanilla: ['Milk', 'Sugar', 'Whipped Cream'],
-            Caramel: ['Milk', 'Caramel Drizzle', 'Whipped Cream'],
-            Hazelnut: ['Milk', 'Sugar', 'Hazelnut Syrup']
+            'French Vanilla': ['Milk', 'Sugar', 'Whipped Cream', 'Heavy Cream', 'Dark Hot Chocolate Powder', 'Marshmallow Hot Chocolate Powder', 'cinnamon'],
         },
         Tea: {
-            'Honey Chai Turmeric': ['Honey', 'Cinnamon', 'Turmeric'],
-            'Blueberry Green Tea': ['Honey', 'Blueberry Syrup', 'Lemon Slice'],
-            Jasmine: ['Honey', 'Jasmine Flowers', 'Sugar'],
-            'Caramel Vanilla': ['Caramel Drizzle', 'Vanilla Syrup', 'Milk'],
-            Peppermint: ['Honey', 'Mint Leaves', 'Sugar'],
-            Matcha: ['Honey', 'Milk', 'Whipped Cream']
+            'Honey Chai Turmeric': ['Honey', 'Cinnamon', 'Turmeric', 'Milk', 'Sugar'],
+            'Blueberry Green Tea': ['Honey', 'Blueberries', 'Lemon Slice', 'Milk', 'Sugar'],
+            Jasmine: ['Honey', 'Jasmine Flowers', 'Sugar', 'Milk'],
+            'Caramel Vanilla': ['Caramel Drizzle', 'Vanilla Syrup', 'Milk', 'Sugar'],
+            Peppermint: ['Honey', 'Mint Leaves', 'Sugar', 'Milk'],
+            Matcha: ['Honey', 'Milk', 'Whipped Cream', 'Sugar']
         },
         Smoothie: {
             Strawberry: ['Ice', 'Whipped Cream', 'Chia Seeds'],
